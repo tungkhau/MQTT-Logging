@@ -60,7 +60,7 @@ public class Main {
                                     JsonNode portData = entry.getValue();
                                     String hexString = portData.get("data").asText();
                                     double convertedValue = convertData(topic, hexString);
-                                    System.out.println("Message arrived. Topic: " + topic + " Extracted data: " + convertedValue);
+                                    System.out.println("Topic: " + topic + " Extracted data: " + convertedValue);
                                 }
                             });
                         } else {

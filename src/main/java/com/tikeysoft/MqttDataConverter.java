@@ -19,7 +19,7 @@ public class MqttDataConverter {
     }
 
     public static int convertBilletWaste(String hexString) {
-        return hexToSignedDecimal(hexString.substring(0, 4));
+        return hexToSignedDecimal(hexString.substring(0, 4)) - 1320;
     }
 
     public static double convertSemiProfileA(String hexString) {
