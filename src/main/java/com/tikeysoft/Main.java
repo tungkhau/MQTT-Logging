@@ -1,11 +1,13 @@
 package com.tikeysoft;
 
-import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
-import org.eclipse.paho.client.mqttv3.MqttMessage;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,7 +40,21 @@ public class Main {
 
                 @Override
                 public void messageArrived(String topic, MqttMessage message) throws Exception {
-                    System.out.println("Message arrived. Topic: " + topic + " Message: " + new String(message.getPayload()));
+                    String payload = new String(message.getPayload());
+                    System.out.println("Message arrived. Topic: " + topic + " Message: " + payload);
+
+                    ObjectMapper mapper = new ObjectMapper();
+                    JsonNode json = mapper.readTree(payload);
+                    JsonNode data = json.get("data");
+                    JsonNode payloadData = data.get("payload");
+
+                    payloadData.fields().forEachRemaining(entry -> {
+                        if (entry.getKey().contains("/iolinkmaster/port")) {
+                            JsonNode portData = entry.getValue();
+                            String value = portData.get("data").asText();
+                            System.out.println("Extracted data: " + value);
+                        }
+                    });
                 }
 
                 @Override
