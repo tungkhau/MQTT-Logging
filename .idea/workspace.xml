@@ -7,7 +7,6 @@
     <list default="true" id="afbfa2d4-f989-436f-b9b7-701abb138bdc" name="Changes" comment="converted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tikeysoft/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tikeysoft/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tikeysoft/MqttDataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tikeysoft/MqttDataConverter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -64,8 +64,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
       </set>
     </attachedChunks>
   </component>
@@ -82,7 +82,15 @@
       <workItem from="1730716847906" duration="603000" />
       <workItem from="1730789596615" duration="1201000" />
       <workItem from="1733202292962" duration="3000" />
-      <workItem from="1733202466017" duration="2702000" />
+      <workItem from="1733202466017" duration="3519000" />
+      <workItem from="1733281258995" duration="85000" />
+      <workItem from="1733447413111" duration="15000" />
+      <workItem from="1733464914673" duration="1145000" />
+      <workItem from="1733467883815" duration="8151000" />
+      <workItem from="1733480155727" duration="114000" />
+      <workItem from="1733822624576" duration="29000" />
+      <workItem from="1734077372979" duration="2271000" />
+      <workItem from="1734080546783" duration="823000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -108,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733204712880</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="converted">
+      <option name="closed" value="true" />
+      <created>1733205189401</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733205189401</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
