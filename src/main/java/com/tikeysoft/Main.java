@@ -23,9 +23,21 @@ public class Main {
                 "AE_01/signal/cutter"
         };
 
+        String[] processedTopics = {
+                "processed/AE_01/condition/die_temp",
+                "processed/AE_01/condition/billet_temp",
+                "processed/AE_01/condition/ramp_pressure",
+                "processed/AE_01/production/billet",
+                "processed/AE_01/production/billet_waste",
+                "processed/AE_01/production/semi_profile"
+        };
+
         MqttHandler mqttHandler = new MqttHandler();
+        ProcessedDataReader processedDataReader = new ProcessedDataReader();
+
         try {
             mqttHandler.connectAndSubscribe(broker, clientId, topics);
+            processedDataReader.connectAndSubscribe(broker, clientId + "_reader", processedTopics);
         } catch (MqttException e) {
             e.printStackTrace();
         }
