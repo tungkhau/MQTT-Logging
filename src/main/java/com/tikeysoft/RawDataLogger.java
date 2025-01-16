@@ -1,26 +1,20 @@
 package com.tikeysoft;
 
-import org.eclipse.paho.client.mqttv3.MqttMessage;
-import org.eclipse.paho.client.mqttv3.MqttCallback;
-import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
-import org.eclipse.paho.client.mqttv3.MqttClient;
-import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
-import org.eclipse.paho.client.mqttv3.MqttException;
-
+import org.eclipse.paho.client.mqttv3.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class ProcessedDataReader {
+public class RawDataLogger {
     private MqttClient client;
     private PrintWriter csvWriter;
 
-    public ProcessedDataReader() {
+    public RawDataLogger() {
         try {
             String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-            csvWriter = new PrintWriter(new FileWriter("processed_data_logs_" + timestamp + ".csv", true));
+            csvWriter = new PrintWriter(new FileWriter("raw_data_logs_" + timestamp + ".csv", true));
             csvWriter.println("Timestamp,Topic,Payload"); // CSV header
         } catch (IOException e) {
             e.printStackTrace();
@@ -44,7 +38,7 @@ public class ProcessedDataReader {
                 String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
                 csvWriter.println(timestamp + "," + topic + "," + payload);
                 csvWriter.flush(); // Ensure data is written to the file immediately
-                System.out.println("Processed "+timestamp + "," + topic + "," + payload);
+                System.out.println("Logged " + timestamp + "," + topic + "," + payload);
             }
 
             @Override

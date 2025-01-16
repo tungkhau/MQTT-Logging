@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afbfa2d4-f989-436f-b9b7-701abb138bdc" name="Changes" comment="16.12">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tikeysoft/ProcessedDataReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tikeysoft/RawDataLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tikeysoft/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tikeysoft/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tikeysoft/MqttDataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tikeysoft/MqttDataConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tikeysoft/MqttHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tikeysoft/MqttHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tikeysoft/ProcessedDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tikeysoft/ProcessedDataReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +102,12 @@
       <workItem from="1734323033290" duration="103000" />
       <workItem from="1734323628377" duration="446000" />
       <workItem from="1734324470446" duration="3000" />
-      <workItem from="1734337637259" duration="194000" />
+      <workItem from="1734337637259" duration="5466000" />
+      <workItem from="1734355631454" duration="253000" />
+      <workItem from="1734400867364" duration="3415000" />
+      <workItem from="1734420128585" duration="3000" />
+      <workItem from="1735788885830" duration="4190000" />
+      <workItem from="1737039552257" duration="152000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -148,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734337654360</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="16.12">
+      <option name="closed" value="true" />
+      <created>1734337846068</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734337846068</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

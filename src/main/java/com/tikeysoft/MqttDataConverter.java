@@ -42,6 +42,10 @@ public class MqttDataConverter {
         return getBitFromHex(hexString.substring(4, 8), 10);
     }
 
+    public static boolean convertBilletCutting(String hexString) {
+        return getBitFromHex(hexString.substring(0, 4), 1);
+    }
+
     public static boolean convertHeartBeat(String hexString) {
         return getBitFromHex(hexString.substring(4, 8), 2);
     }
